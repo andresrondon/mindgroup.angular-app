@@ -1,5 +1,8 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="side" opened [fixedInViewport]="open" class="example-sidenav">
+    <button mat-icon-button class="example-icon" (click)="open = !open; openChange.emit(open)">
+      <mat-icon>close</mat-icon>
+    </button>
     <mat-nav-list>
       <a mat-list-item routerLink="">Inicio</a>
       <a mat-list-item routerLink="lorem-ipsum">Lorem Ipsum</a>

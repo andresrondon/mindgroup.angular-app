@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-side-nav',
@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SideNavComponent {
   @Input() open: boolean = false;
+  @Output() openChange = new EventEmitter<boolean>();
 }
