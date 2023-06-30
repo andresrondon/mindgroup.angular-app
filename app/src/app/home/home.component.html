@@ -7,4 +7,5 @@
 
 <app-side-nav #sidenav [(open)]="sideNavOpen"></app-side-nav>
 <app-table-with-filter></app-table-with-filter>
-<app-reactive-form></app-reactive-form>
+<mat-divider></mat-divider>
+<app-reactive-form (elementAdded)="elementAdded($event)"></app-reactive-form>

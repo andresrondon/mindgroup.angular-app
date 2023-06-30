@@ -24,4 +24,10 @@ export class TableWithFilterComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
+  addElement(element: PeriodicElement) {
+    const data = this.dataSource.data;
+    data.push(element);
+    this.dataSource.data = data;
+  }
 }

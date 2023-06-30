@@ -1,10 +1,20 @@
-<form>
-  <mat-form-field>
-    <mat-label>User</mat-label>
-    <input matInput [formControl]="user">
+<h2>Agregar un elemento</h2>
+<form class="example-form" [formGroup]="form" (ngSubmit)="addPeriodicElement()">
+  <mat-form-field class="example-full-width">
+    <mat-label>No.</mat-label>
+    <input type="number" matInput formControlName="position">
   </mat-form-field>
-  <mat-form-field>
-    <mat-label>Password</mat-label>
-    <input matInput [formControl]="password" type="password">
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
   </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Weight</mat-label>
+    <input type="number" matInput formControlName="weight">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Symbol</mat-label>
+    <input matInput formControlName="symbol">
+  </mat-form-field>
+  <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid">Submit</button>
 </form>
