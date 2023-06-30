@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Prueba de Angular';
+  sideNavOpen: boolean = false;
 }
